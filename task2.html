@@ -299,6 +299,19 @@
             };
         }
 
+        function clearall() {
+            var tickmark = document.getElementsByClassName("ticklist");
+            var i;
+            console.log(tickmark.length);
+            for (i = 0; i < tickmark.length; i++) {
+                while (tickmark[i].checked == true) {
+                    var liClicked1 = tickmark[i].parentElement;
+                    var parentUl = document.getElementById("myList");
+                    parentUl.removeChild(liClicked1);
+                }
+            }
+        }
+
         function validate() {
             var inputText = document.getElementById('input').value;
             addSessionStorage(inputText);
@@ -307,9 +320,10 @@
             } else {
                 todos = get_list();
                 createlist(todos[todos.length - 1]); //craeting li element
-                document.querySelectorAll("ul li").click(removeSinglelist());
                 //after adding to list clear the text inputs
                 document.getElementById("input").value = "";
+                document.querySelectorAll("ul li").click(removeSinglelist());
+
             }
         }
     </script>
