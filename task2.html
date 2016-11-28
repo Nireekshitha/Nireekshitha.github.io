@@ -299,13 +299,14 @@
             };
         }
 
-        function clearall() {
+        function clearall() { debugger;
             var tickmark = document.getElementsByClassName("ticklist");
             var i;
             console.log(tickmark.length);
             for (i = 0; i < tickmark.length; i++) {
                 while (tickmark[i].checked == true) {
-                    var liClicked1 = tickmark[i].parentElement;
+                    var spanClicked1 = tickmark[i].parentElement;
+                    var liClicked1= spanClicked1.parentElement;
                     var parentUl = document.getElementById("myList");
                     parentUl.removeChild(liClicked1);
                 }
