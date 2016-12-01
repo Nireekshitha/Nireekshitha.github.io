@@ -15,8 +15,8 @@ var BirthFlag = 0,
     cityFlag = 0,
     stateFlag = 0;
 
-function validation() {
-    if (BirthFlag && emailFlag && mobFlag && pinFlag && firstNameFlag && lastNameFlag && cityFlag && stateFlag) {
+function validation() {debugger;
+    if (emailFlag && mobFlag && pinFlag && firstNameFlag && lastNameFlag && cityFlag && stateFlag&&BirthFlag) {
         document.getElementById("submt").type = "submit";
     } else {
         alert("Error: One or More Input field are improper");
@@ -25,7 +25,6 @@ function validation() {
 }
 
 function fistNameValidation() {
-    debugger;
     var firstName = document.getElementById("firstName").value;
     var name = /^[a-zA-Z]{3,30}$/;
     if (!(name.test(firstName))) {
@@ -127,7 +126,7 @@ function dateOfBirthValidation() {
 
 
     }
-    birthFlag = flag;
+    BirthFlag = flag;
     if (flag == 0) {
         document.getElementById("birthDateError").innerHTML = "In valid date of birth";
     } else {
@@ -165,7 +164,7 @@ function phoneNumberValidation() {
 }
 
 function cityValidation() {
-    debugger;
+
     var city = document.getElementById("city").value;
     var cityname = /^[a-zA-Z]{3,30}$/;
     if (cityname.test(city)) {
@@ -195,7 +194,6 @@ function pinCodeValidation() {
 }
 
 function stateValidation() {
-    debugger;
     var state = document.getElementById("state").value;
     var statePattern = /^[a-zA-Z]{3,30}$/;
     if (statePattern.test(state)) {
