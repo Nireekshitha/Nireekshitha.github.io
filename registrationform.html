@@ -10,20 +10,27 @@
         .bodycontainer {
             background-color: rgb(112, 120, 233);
             color: white;
+            margin-left: 20px;
+            padding-bottom: 30px;
         }
 
         input[type="text"] {
             color: black;
+            margin-bottom: 2px;
         }
+
         input[type="nuber"] {
             color: black;
+              margin-bottom: 2px;
         }
+
         select {
             color: black
         }
 
         textarea {
             color: black;
+              margin-bottom: 2px;
         }
 
         .errr {
@@ -36,7 +43,7 @@
             width: 160px;
             position: absolute;
             top: 46px;
-            left: 659px;
+            left: 59%;
         }
 
         .uploadC1 {
@@ -48,7 +55,7 @@
             font-size: 93%;
             position: absolute;
             top: 218px;
-            left: 605px;
+            left: 56%;
         }
 
         .upload {
@@ -56,27 +63,33 @@
             position: absolute;
             z-index: -1;
         }
-        .heading{
-          text-align: center;
-          font-size: 32px;
+
+        .heading {
+            text-align: center;
+            font-size: 32px;
         }
-        .submitButton{
-          color:black;
+
+        .submitButton {
+            color: black;
         }
-        .resetButton{
-          color:black;
+
+        .resetButton {
+            color: black;
+        }
+        .formConatainer{
+          margin-left:13%;
         }
     </style>
 </head>
 
 <body>
-    <div class="row container bodycontainer">
+    <div class="row bodycontainer">
         <div class="col-sm-10 col-md-10 col-lg-10">
             <div class="row heading ">
                 Student Registration Form
             </div>
 
-            <form  name="myform" id="myform">
+            <form name="myform" id="myform" class="formConatainer">
 
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">First Name:</span>
@@ -234,7 +247,7 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Mobile No:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" name="mobileNumber" id="mobileNumber"  />
+                        <input type="text" name="mobileNumber" id="mobileNumber" />
                     </div>
 
                 </div>
@@ -245,7 +258,7 @@
                     <span class="col-sm-2 col-md-2 col-lg-2">Gender</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
                         <label for="men">Men</label>
-                        <input type="radio" id="men" name="gender" value="men"  />
+                        <input type="radio" id="men" name="gender" value="men" />
                         <label for="women">Women</label>
                         <input type="radio" id="women" name="gender" value="women" />
                     </div>
@@ -254,13 +267,13 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Address:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <textarea id="add" name="add" rows="5" cols="25" ></textarea>
+                        <textarea id="add" name="add" rows="5" cols="25"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">City:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" name="city" id="city"  />
+                        <input type="text" name="city" id="city" />
                     </div>
 
                 </div>
@@ -276,7 +289,7 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">State:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" name="state" id="state"  />
+                        <input type="text" name="state" id="state" />
                     </div>
                 </div>
 
@@ -315,16 +328,16 @@
                         <div class="row">
                             <span class="col-sm-1 col-md-1 col-lg-1">1</span>
                             <span class="col-sm-2 col-md-2 col-lg-2">class x</span>
-                            <input type="text" class="col-sm-3 col-md-3 col-lg-3"  >
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
+                            <input type="text" class="col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3">
                         </div>
                         <div class="row">
                             <span class="col-sm-1 col-md-1 col-lg-1">2</span>
                             <span class="col-sm-2 col-md-2 col-lg-2">class xii</span>
-                            <input type="text" class="col-sm-3 col-md-3 col-lg-3"  >
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
+                            <input type="text" class="col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3">
                         </div>
                         <div class="row">
                             <span class="col-sm-1 col-md-1 col-lg-1">3</span>
@@ -348,7 +361,7 @@
                     <span class="col-sm-2 col-md-2 col-lg-2">Course Apllied for</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
                         <label for="bca">BCA</label>
-                        <input type="radio" id="bca" name="course"  />
+                        <input type="radio" id="bca" name="course" />
                         <label for="bcom">BCOM</label>
                         <input type="radio" id="bcom" name="course" />
                         <label for="bsc">BSC</label>
@@ -359,7 +372,7 @@
                 </div>
                 <div class="row">
                     <input id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton" onclick="RegistrationValid()" type="button" value="Submit">
-                    <input type="reset" class="col-sm-2 col-md-2 col-lg-2 resetButton"/>
+                    <input type="reset" class="col-sm-2 col-md-2 col-lg-2 resetButton" />
                 </div>
             </form>
         </div>
