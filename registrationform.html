@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Rigistration Form</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="registration.js"></script>
+    <script src="test.js"></script>
     <style media="screen">
         .bodycontainer {
             background-color: rgb(112, 120, 233);
@@ -76,28 +76,27 @@
                 Student Registration Form
             </div>
 
-            <form onsubmit="validation() ">
+            <form  name="myform" id="myform">
 
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">First Name:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" id="firstName" onkeyup="fistNameValidation()" />
+                        <input type="text" name="firstname" id="firstName" />
                     </div>
                 </div>
-                <p id="firsnameError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"></p>
 
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Last Name:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" id="lastName" onkeyup="lastNameValidation()" />
+                        <input type="text" id="lastName" name="lastname" />
                     </div>
                 </div>
-                <p id="lastnameError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"></p>
+
                 <div class="row">
 
                     <span class="col-sm-2 col-md-2 col-lg-2">Date Of Birth:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <select id="date">
+                        <select id="date" name="date">
                       <option selected="selected" value="">Date:
                       </option>
                       <option value="1">1
@@ -227,15 +226,15 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">EmailID:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" id="emailId" onkeyup="EmailValidation()" required/>
+                        <input type="text" name="email" id="emailId" />
                     </div>
 
                 </div>
-                <p id="emailError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"></p>
+
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Mobile No:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" id="mobileNumber" onkeyup="phoneNumberValidation()" />
+                        <input type="text" name="mobileNumber" id="mobileNumber"  />
                     </div>
 
                 </div>
@@ -246,7 +245,7 @@
                     <span class="col-sm-2 col-md-2 col-lg-2">Gender</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
                         <label for="men">Men</label>
-                        <input type="radio" id="men" name="gender" value="men" required/>
+                        <input type="radio" id="men" name="gender" value="men"  />
                         <label for="women">Women</label>
                         <input type="radio" id="women" name="gender" value="women" />
                     </div>
@@ -255,21 +254,21 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Address:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <textarea rows="5" cols="25" required></textarea>
+                        <textarea id="add" name="add" rows="5" cols="25" ></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">City:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" id="city" onkeyup="cityValidation()" />
+                        <input type="text" name="city" id="city"  />
                     </div>
 
                 </div>
-                <p id="cityError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"> </p>
+
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Pin Code:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" id="pincode" onkeyup="pinCodeValidation()" />
+                        <input type="text" name="pincode" id="pincode" />
                     </div>
 
                 </div>
@@ -277,10 +276,10 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">State:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" id="state" onkeyup="stateValidation()" />
+                        <input type="text" name="state" id="state"  />
                     </div>
                 </div>
-                <p id="stateError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"></p>
+
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Country:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
@@ -316,16 +315,16 @@
                         <div class="row">
                             <span class="col-sm-1 col-md-1 col-lg-1">1</span>
                             <span class="col-sm-2 col-md-2 col-lg-2">class x</span>
-                            <input type="text" class="col-sm-3 col-md-3 col-lg-3" required>
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3" required>
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3" required>
+                            <input type="text" class="col-sm-3 col-md-3 col-lg-3"  >
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
                         </div>
                         <div class="row">
                             <span class="col-sm-1 col-md-1 col-lg-1">2</span>
                             <span class="col-sm-2 col-md-2 col-lg-2">class xii</span>
-                            <input type="text" class="col-sm-3 col-md-3 col-lg-3" required>
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3" required>
-                            <input type="number" class="col-sm-3 col-md-3 col-lg-3" required>
+                            <input type="text" class="col-sm-3 col-md-3 col-lg-3"  >
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
+                            <input type="number" class="col-sm-3 col-md-3 col-lg-3"  >
                         </div>
                         <div class="row">
                             <span class="col-sm-1 col-md-1 col-lg-1">3</span>
@@ -349,7 +348,7 @@
                     <span class="col-sm-2 col-md-2 col-lg-2">Course Apllied for</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
                         <label for="bca">BCA</label>
-                        <input type="radio" id="bca" name="course" required/>
+                        <input type="radio" id="bca" name="course"  />
                         <label for="bcom">BCOM</label>
                         <input type="radio" id="bcom" name="course" />
                         <label for="bsc">BSC</label>
@@ -359,7 +358,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <button id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton">Submit</button>
+                    <input id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton" onclick="RegistrationValid()" type="button" value="Submit">
                     <input type="reset" class="col-sm-2 col-md-2 col-lg-2 resetButton"/>
                 </div>
             </form>
