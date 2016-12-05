@@ -202,6 +202,20 @@ function dateOfBirthValidation() { debugger;
     }
     return msg;
 }
+function onFileSelected(event) {
+    var selectedFile = event.target.files[0];
+    var reader = new FileReader();
+
+    var imgtag = document.getElementById("myimage");
+    //  imgtag.title = selectedFile.name;
+
+    reader.onload = function(event) {
+        //  imgtag.src = event.target.result;
+        imgtag.src = reader.result;
+    };
+
+    reader.readAsDataURL(selectedFile);
+}
 // var submitBtton=document.getElementById("submt");
 //   submitBtton.addEventListener('click',RegistrationValid()); ;
 // //var fname=document.getElementsByName("firstname")[0].value;
