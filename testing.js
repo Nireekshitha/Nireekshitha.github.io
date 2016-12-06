@@ -1,6 +1,6 @@
 window.onload=testing();
 
-function testing() { debugger;
+function testing() {
   var msg="";
     var form = document.getElementById("myform");
     var inputELe = document.getElementsByTagName('input');
