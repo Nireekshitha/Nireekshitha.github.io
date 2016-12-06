@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Rigistration Form</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="test.js"></script>
+
     <style media="screen">
         .bodycontainer {
             background-color: rgb(112, 120, 233);
@@ -94,7 +94,7 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">First Name:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" name="firstname" id="firstName" />
+                        <input type="text" name="firstname" id="firstName" min="3" max="max" pattern="^[a-zA-Z]{3,30}$"/>
                     </div>
                 </div>
 
@@ -239,7 +239,7 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">EmailID:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" name="email" id="emailId" />
+                        <input type="email" name="email" id="emailId" />
                     </div>
 
                 </div>
@@ -247,7 +247,7 @@
                 <div class="row">
                     <span class="col-sm-2 col-md-2 col-lg-2">Mobile No:</span>
                     <div class="col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" name="mobileNumber" id="mobileNumber" />
+                        <input type="number" name="mobileNumber" id="mobileNumber" />
                     </div>
 
                 </div>
@@ -371,7 +371,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton" onclick="RegistrationValid()" type="button" value="Submit">
+                    <input id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton" type="submit" value="Submit">
                     <input type="reset" class="col-sm-2 col-md-2 col-lg-2 resetButton" />
                 </div>
             </form>
@@ -384,6 +384,7 @@
         <label for="addofferupload">Upload Image</label>
         <input type="file" id="addofferupload" class="upload" onchange="onFileSelected(event)">
     </div>
+      <script src="testing.js"></script>
 </body>
 
 </html>
