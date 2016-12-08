@@ -14,7 +14,7 @@
             padding-bottom: 30px;
         }
 
-        input[type="text"] {
+        input{
             color: black;
             margin-bottom: 2px;
         }
@@ -173,7 +173,7 @@
                       <option value="31">31
                       </option>
                     </select>
-                        <select id="month">
+                        <select id="month" name="month">
                     <option selected="selected" value="">Month:
                     </option>
                     <option value="1">Jan
@@ -189,7 +189,7 @@
                     <option value="6">Jun
                     </option>
                     <option value="7">Jul
-                    </option>
+                    </option>aaaaa
                     <option value="8">Aug
                     </option>
                     <option value="9">Sep
@@ -201,7 +201,7 @@
                     <option value="12">Dec
                     </option>
                   </select>
-                        <select id="year" onblur="dateOfBirthValidation()">
+                        <select id="year" onblur="dateOfBirthValidation()"  name="year" >
                   <option selected="selected" value="">Year:
                   </option>
                   <option value="1990">1990
@@ -371,19 +371,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton" type="submit" value="Submit">
+                    <input id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton" value="Submit" onclick="testing()" readonly>
                     <input type="reset" class="col-sm-2 col-md-2 col-lg-2 resetButton" />
+                </div>
+                <div class="profileImage">
+                    <img alt="SelectImage" id="myimage" width="160px" height="160px" />
+                </div>
+                <div class="uploadC1  col-sm-2 col-md-2 col-lg-2">
+                    <label for="addofferupload">Upload Image</label>
+                    <input type="file" id="addofferupload" class="upload" onchange="onFileSelected(event)">
                 </div>
             </form>
         </div>
     </div>
-    <div class="profileImage">
-        <img alt="SelectImage" id="myimage" width="160px" height="160px" />
-    </div>
-    <div class="uploadC1  col-sm-2 col-md-2 col-lg-2">
-        <label for="addofferupload">Upload Image</label>
-        <input type="file" id="addofferupload" class="upload" onchange="onFileSelected(event)">
-    </div>
+
       <script src="testing.js"></script>
 </body>
 
