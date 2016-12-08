@@ -7,10 +7,23 @@ function creteMessage(msg, ele,name) {
     parent.appendChild(error);
 
 }
+
 // var submit = document.getElementById('submit');
 // submit.addEventListener("click",testing());
 var form = document.getElementById("myform");
+form.elements["email"].onchange=function(){debugger;
+  if (!(form.elements["email"].value=="")) {
 
+        msg="";
+        creteMessage(msg, form.elements["email"],"email");
+      }
+      else{
+        msg="enter mail";
+          creteMessage(msg, form.elements["email"],"email");
+      }
+
+};
+form.elements["email"].onchange();
 function testing() {
     var msg = "";
     form = document.getElementById("myform");
@@ -24,18 +37,39 @@ function testing() {
                         creteMessage(msg, form.elements[i], form.elements[i].name)
                     }
 
+
                 }
             }
             if (form.elements[i].type == "email") {
                 var emailreg = /^[a-zA-Z]+\w*(\.?[a-zA-z]+)\@[a-zA-z]+\.[a-zA-Z]+$/;
-                if (!(emailreg.test(form.elements[i].value))) {
+                if(form.elements[i].value==""){
+                  msg="enter Mail adress"
+                  creteMessage(msg, form.elements[i],form.elements[i].name);
+                }
+                else if (!(emailreg.test(form.elements[i].value))) {
                     msg = "Enter proper Mail address";
-                    if (!(msg == "")) {
+
                         creteMessage(msg, form.elements[i],form.elements[i].name);
                     }
+                    else{
+                      msg="";
+                      creteMessage(msg, form.elements[i],form.elements[i].name);
+                    }
 
-                }
-            }
+                    // form.elements[i].onchange=function(){debugger;
+                    //   if (!(form.elements[i].value=="")) {
+                    //         msg="";
+                    //         creteMessage(msg, form.elements[i],form.elements[i].name);
+                    //       }
+                    //       else{
+                    //         msg="enter mail";
+                    //           creteMessage(msg, form.elements[i],form.elements[i].name);
+                    //       }
+                    //
+                    // };
+                    // form.elements[i].onchange();
+
+}
             if (form.elements[i].type == "radio") {
                 var checkedValue = "";
                 var abc = form.elements[i].name
@@ -84,7 +118,7 @@ function testing() {
 }
 
 
-function dateOfBirthValidation(day, month, year) { debugger;
+function dateOfBirthValidation(day, month, year) {
     var flag = 0;
 
     var totaldays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
