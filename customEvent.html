@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Event</title>
+  </head>
+  <body>
+    <h1 id="abc">Heelllloo</h1>
+    <script type="text/javascript">
+    var event=new CustomEvent("testing");
+    var bodyElement=document.getElementById("abc");
+    bodyElement.addEventListener("testing",function(){
+      alert("Hellooooo"+event.target);
+
+    });
+    bodyElement.dispatchEvent(event);
+    </script>
+  </body>
+</html>
