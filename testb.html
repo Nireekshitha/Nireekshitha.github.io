@@ -6,97 +6,81 @@
     <meta charset="utf-8">
     <title>CouchDB</title>
     <script type="text/javascript">
-        function loadDoc() {
+        var DATABASE = "/" + window.location.href.split("/")[3];
+        window.onload = function loadDoc() {
             var DATABASE = "/" + window.location.href.split("/")[3];
-            //           function uploadHighscores() {
-            //   var req = new XMLHttpRequest();
-            //   req.open('PUT', DATABASE, true); // METHOD, url, async
-            //   req.onload = function() { // Asynchronous callback.
-            //     console.log(req.responseText);
-            //     console.log("Scores uploaded");
-            //   }
-            //   req.setRequestHeader('Content-Type', 'application/json');
-            //   console.log("Sending scores...");
-            //
-            //   req.send("{\"_id\": \"highscores\", \"_rev\": \"6-f29fd233a21c65e3f4a7485f36c46ae4\", \"data\":{\"scores\":[999, 999, 999, 999, 999], \"times\":[[59, 59, 999], [59, 59, 999], [59, 59, 999], [59, 59, 999], [59, 59, 999]]}}");
-            // }
-            // }
+            //    var DATABASE = "webs";
+            var req1 = new XMLHttpRequest();
+          //  var url1="http://localhost:5984/tasks/34156";
+            var url1="http://127.0.0.1:5984/tasks/34156?rev=7-51bf95db01913aa2d72a7bf202d5d963";
+            req1.open('DELETE', url1, true);
+            // req1.setRequestHeader('Content-Type', 'application/json');
+            // console.log("abc..");
+            // req1.send("{\"_id\": \"34156\"}");
+            var req = new XMLHttpRequest();
+            req.open('POST', DATABASE, true);
+            req.onload = function() { // Asynchronous callback.
+                console.log(req.responseText);
+                console.log("xys");
+            }
+            req.setRequestHeader('Content-Type', 'application/json');
+            console.log("abc..");
+            req.send("{\"_id\": \"34671156\", \"_rev\": \"6-f29fd233aa123\", \"name\":\"abc\", \"userid\":\"a123\"}");
 
-            var task = {
-                "_id" : "123",
-                "name": "abc",
-                "userid": "a123",
-                "age": 23
-            };
+
+        }
+
+        function createView() {
+            var req = new XMLHttpRequest();
+
+            var view = {
+                "language": "javascript",
+                "views": {
+                    "tasks": {
+                        "map": "function(doc) {if (doc._id==) {emit(doc._id, doc);}}"
+                    }
+                }
+
+            }
+            req.open('PUT', DATABASE + "/_design/tests", true);
+            req.setRequestHeader('Content-Type', 'application/json');
+            req.send(JSON.stringify(view));
+            getTasks();
+        }
+
+        function getTasks() {
             $.ajax({
-                type: "POST",
-                url: DATABASE,
-                contentType: "application/json",
-                data: JSON.stringify(task),
-                success: "true"
-            });
-
-
-            $.ajax({
-                type: "GET",
-                url: DATABASE+"tasks",
+                url: DATABASE + "/_design/tests/_view/tasks",
                 success: function(data) {
                     var view = JSON.parse(data);
                     var tasks = [];
                     $(view.rows).each(function(index, item) {
                         tasks.push(item.value);
                     });
+                    console.log(tasks);
                     displayTasks(tasks);
                 }
             });
+        }
 
-            function displayTasks(tasks) {
-                var html = "<table>";
-                $(tasks).each(function(index, task) {
-                    var edit = "<input type='button' value='Edit' " +
-                        "onclick='editTask(" + JSON.stringify(task) + ")' />";
-                    var del = "<input type='button' value='Delete' " +
-                        "onclick='deleteTask(" + JSON.stringify(task) + ")' />";
-
-                    html += "<tr>";
-                    html += "<td>" + task.task + "</td>";
-                    html += "<td>" + edit + "</td>";
-                    html += "<td>" + del + "</td>";
-                    html += "</tr>";
-                });
-                html += "</table>";
-
-                $('#tasks').empty();
-                $('#tasks').append(html);
-                $.ajax({
-                    type: "PUT",
-                    url: DATABASE + "/" + task._id,
-                    contentType: "application/json",
-                    data: JSON.stringify(task),
-                    success: function () {
-                        getTasks();
-                    }
-                 });
-            }
-
-            //         var DATABASE = "/" + window.location.href.split("/")[3];
-            // var xhttp = new XMLHttpRequest();
-            // xhttp.onreadystatechange = function() {
-            //   if (this.readyState == 4 && this.status == 200) {
-            //     document.getElementById("demo").innerHTML =
-            //     this.responseText;
-            //   }
-            // };
-            // xhttp.open("GET", "a.html" , true);
-            // xhttp.send();
-            // }
+        function displayTasks(tasks) {
+            console.log(JSON.parse(tasks));
+            var html = "<table>";
+            $(tasks[0]).each(function(index, task) {
+                html += "<tr>";
+                html += "<td>" + tasks.task + "</td>";
+                html += "</tr>";
+            });
+            html += "</table>";
+            $('#tasks').empty();
+            $('#tasks').append(html);
         }
     </script>
 </head>
 
-<body>
-    <h1 onclick=" loadDoc()">Hello</h1>
-
+<body onload="createView(); getTasks();">
+    <h1>Hello</h1>
+    <div id="tasks"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 
