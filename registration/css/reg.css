@@ -1,0 +1,72 @@
+.bodycontainer {
+    background-color: rgb(112, 120, 233);
+    color: white;
+    margin-left: 20px;
+    padding-bottom: 30px;
+}
+
+input{
+    color: black;
+    margin-bottom: 2px;
+}
+
+input[type="nuber"] {
+    color: black;
+      margin-bottom: 2px;
+}
+
+select {
+    color: black
+}
+
+textarea {
+    color: black;
+      margin-bottom: 2px;
+}
+
+.errr {
+    color: red;
+}
+
+.profileImage {
+    border: 2px solid black;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 46px;
+    left: 59%;
+}
+
+.uploadC1 {
+    background: white;
+    border-radius: 5px;
+    height: 26px;
+    text-align: center;
+    color: #000;
+    font-size: 93%;
+    position: absolute;
+    top: 218px;
+    left: 56%;
+}
+
+.upload {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+}
+
+.submitButton {
+    color: black;
+}
+
+.resetButton {
+    color: black;
+}
+.formConatainer{
+  margin-left:13%;
+}
