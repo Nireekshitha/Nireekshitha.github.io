@@ -1,77 +1,95 @@
-var reg = Backbone.Model.extend({
-    defaults: {
-        firstName: "",
-        lastName: "",
-        dateOfBirth:{
-          date:"",
-          month:"",
-          year:""
-        },
-        emailId: "",
-        mobileNo: "",
-        gender: "",
-        address: "",
-        city: "",
-        pincode: "",
-        state:"",
-        country:"India"
-    }
-});
-var ApplicationRouter = Backbone.Router.extend({
+  var registrationModel={}
+  var reg = Backbone.Model.extend({
+      defaults: {
+          firstName: "abcd",
+          lastName: "",
+          dateOfBirth: {
+              date: "",
+              month: "",
+              year: ""
+          },
+          emailId: "abc@gmail.com",
+          mobileNo: "",
+          gender: "",
+          address: "",
+          city: "",
+          pincode: "",
+          state: "",
+          country: "India"
+      }
+  });
 
-    //map url routes to contained methods
-    routes: {
-      "registration":"",
-        "dashboard": "dashbord"
-    },
+  var view1 = Backbone.View.extend({
 
-    dashboard: function() {
-        $("#templateHTML").show();
-    }
+      el: $('form'),
 
-});
-var view1 = Backbone.View.extend({
+      my_template: _.template("<p>firstName:<strong><%= firstName %></strong></p><p>lastName: <%= lastName %></p><p>Email: <%= emailId %></p>"),
 
-    el: $('form'),
+      initialize: function() {
+          this.render(this.model);
+      },
 
-    events: {
-        'submit': 'onFormSubmit',
+      render: function() {
+          this.$el.html(this.my_template(this.model.toJSON()));
+      }
 
-    },
-    getInput: function(name) {
-        return this.$el.find('[name="' + name + '"]');
-    },
-    onFormSubmit: function(e) {
-        e.preventDefault();
-        var model = new reg();
+  });
+  var view3 = Backbone.View.extend({
 
-        this.$el.find('input[type="text"]').each(function() {
-            model.set(this.name, this.value);
-        })
-        this.$el.find('input[type="number"]').each(function() {
-            model.set(this.name, this.value);
-        })
-        this.$el.find('input[type="radio"]:checked').each(function() {
-            model.set(this.name, this.value);
-        })
-        this.$el.find('input[type="checkbox"]:checked').each(function() {
-            model.set(this.name, this.value);
-        })
-        this.$el.find('input[type="textarea"]').each(function() {
-            model.set(this.name, this.value);
-        })
-        this.$el.find('select[name]').each(function(){
-                model.set(this.name, this.value);
-        })
+      el: $('form'),
 
-        var router11 = new ApplicationRouter()
-            //update url and pass true to execute route method
-        router11.navigate("dashboard", true);
+      events: {
+          'submit': 'onFormSubmit',
 
-        console.log(model.get('firstName'));
-        console.log(model.get('lastName'));
+      },
+      getInput: function(name) {
+          return this.$el.find('[name="' + name + '"]');
+      },
 
-    }
+      onFormSubmit: function(e) {
+          var model = new reg();
+          this.$el.find('input[type="text"]').each(function() {
+              model.set(this.name, this.value);
+          });
+          this.$el.find('input[type="number"]').each(function() {
+              model.set(this.name, this.model.value);
+          });
+          this.$el.find('input[type="radio"]:checked').each(function() {
+              model.set(this.name, this.value);
+          });
+          this.$el.find('input[type="checkbox"]:checked').each(function() {
+              model.set(this.name, this.value);
+          })
+          this.$el.find('input[type="textarea"]').each(function() {
+              model.set(this.name, this.value);
+          })
+          this.$el.find('select[name]').each(function() {
+              model.set(this.name, this.value);
+          })
 
-});
-var view2=new view1()
+          console.log(model.get('firstName'));
+          console.log(model.get('lastName'));
+      }
+  });
+
+
+  var viw1 = new view3()
+
+  var ApplicationRouter = Backbone.Router.extend({
+      //map url routes to contained methods
+      routes: {
+          "login": "",
+          "registration": "dashbord"
+      },
+
+      dashbord: function() {
+        var registrationModel=new reg()
+          var view2 = new view1({  model: registrationModel  })
+          $(document.body).html(view1.el);
+      }
+
+  });
+
+
+  var route1 = new ApplicationRouter();
+  Backbone.history.start();
