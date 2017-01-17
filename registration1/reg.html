@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rigistration Form</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reg.css">
+
+</head>
+
+<body>
+    <div class="row bodycontainer">
+
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="sidebar-nav ">
+                    <div class="navbar navbar-default" role="navigation">
+
+                        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#login">Login</a></li>
+                                <li class="sidenavHeight"><a href="#registration">Registration</a></li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <div class=" col-sm-10">
+              <form name=" myform" id="myform" class=" formConatainer" method="POST">
+                  <div class="row  content">
+                      <div class="row heading ">
+                          Welcome Screen
+                      </div>
+                  </div>
+              </form>
+            </div>
+
+            <script id="regustrationForm" type="templete/html">
+                <div class="row heading ">
+                    Student Registration Form
+                </div>
+
+
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">First Name:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="text" name="firstName" id="firstName" min="3" max="max" pattern="^[a-zA-Z]{3,30}$" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Last Name:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="text" id="lastName" name="lastName" />
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <span class="col-sm-2 col-md-2 col-lg-2">Date Of Birth:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <select id="date" name="date">
+                      <option selected="selected" value="">Date:
+                      </option>
+                      <option value="1">1
+                      </option>
+                      <option value="2">2
+                      </option>
+                      <option value="3">3
+                      </option>
+                      <option value="4">4
+                      </option>
+                      <option value="5">5
+                      </option>
+                      <option value="6">6
+                      </option>
+                      <option value="7">7
+                      </option>
+                      <option value="8">8
+                      </option>
+                      <option value="9">9
+                      </option>
+                      <option value="10">10
+                      </option>
+                      <option value="11">11
+                      </option>
+                      <option value="12">12
+                      </option>
+                      <option value="13">14
+                      </option>
+                      <option value="14">15
+                      </option>
+                      <option value="15">16
+                      </option>
+                      <option value="16">17
+                      </option>
+                      <option value="17">18
+                      </option>
+                      <option value="19">19
+                      </option>
+                      <option value="20">20
+                      </option>
+                      <option value="21">21
+                      </option>
+                      <option value="22">22
+                      </option>
+                      <option value="23">23
+                      </option>
+                      <option value="24">24
+                      </option>
+                      <option value="25">25
+                      </option>
+                      <option value="26">26
+                      </option>
+                      <option value="27">27
+                      </option>
+                      <option value="28">28
+                      </option>
+                      <option value="29">29
+                      </option>
+                      <option value="30">30
+                      </option>
+                      <option value="31">31
+                      </option>
+                    </select>
+                        <select id="month" name="month">
+                    <option selected="selected" value="">Month:
+                    </option>
+                    <option value="1">Jan
+                    </option>
+                    <option value="2">Feb
+                    </option>
+                    <option value="3">Mar
+                    </option>
+                    <option value="4">Apr
+                    </option>
+                    <option value="5">May
+                    </option>
+                    <option value="6">Jun
+                    </option>
+                    <option value="7">Jul
+                    </option>aaaaa
+                    <option value="8">Aug
+                    </option>
+                    <option value="9">Sep
+                    </option>
+                    <option value="10">Oct
+                    </option>
+                    <option value="11">Nov
+                    </option>
+                    <option value="12">Dec
+                    </option>
+                  </select>
+                        <select id="year" onblur="dateOfBirthValidation()" name="year">
+                  <option selected="selected" value="">Year:
+                  </option>
+                  <option value="1990">1990
+                  </option>
+                  <option value="1991">1991
+                  </option>
+                  <option value="1992">1992
+                  </option>
+                  <option value="1993">1993
+                  </option>
+                  <option value="1994">1994
+                  </option>
+                  <option value="1995">1995
+                  </option>
+                  <option value="1996">1996
+                  </option>
+                  <option value="1997">1997
+                  </option>
+                  <option value="1998">1998
+                  </option>
+                  <option value="1999">1999
+                  </option>
+                  <option value="2000">2000
+                  </option>
+                  <option value="2001">2001
+                  </option>
+                  <option value="2002">2002
+                  </option>
+                  <option value="2003">2003
+                  </option>
+                  </select>
+                    </div>
+                </div>
+                <p id="birthDateError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"></p>
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">EmailID:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="email" name="emailId" id="emailId" />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Mobile No:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="number" name="mobileNo" id="mobileNumber" />
+                    </div>
+
+                </div>
+
+
+                <p id="PhoneError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"></p>
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Gender</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <label for="men">Men</label>
+                        <input type="radio" id="men" name="gender" value="men" />
+                        <label for="women">Women</label>
+                        <input type="radio" id="women" name="gender" value="women" />
+                    </div>
+
+                </div>
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Address:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <textarea id="add" name="address" rows="5" cols="25"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">City:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="text" name="city" id="city" />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Pin Code:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="text" name="pincode" id="pincode" />
+                    </div>
+
+                </div>
+                <p id="pinError" class="col-sm-offset-2 col-md-offset-2 col-lg-offset-2 errr"></p>
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">State:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="text" name="state" id="state" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Country:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <input type="text" id="country" value="India" />
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Hobbies:</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <label for="drawing">Drawing</label>
+                        <input type="checkbox" id="darwing" name="hobbies" />
+                        <label for="singing">Singing</label>
+                        <input type="checkbox" id="singing" name="hobbies" />
+                        <label for="dancing">Dancing</label>
+                        <input type="checkbox" id="danciing" name="hobbies" />
+                        <label for="sketching">Sketching</label>
+                        <input type="checkbox" id="sketching" name="hobbies" />
+                        <label for="others">Others</label>
+                        <input type="checkbox" id="others" name="hobbies" />
+                        <input type="text" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-sm-2 col-md-2 col-lg-2">Course Apllied for</span>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <label for="bca">BCA</label>
+                        <input type="radio" id="bca" name="course" />
+                        <label for="bcom">BCOM</label>
+                        <input type="radio" id="bcom" name="course" />
+                        <label for="bsc">BSC</label>
+                        <input type="radio" id="bsc" name="course" />
+                        <label for="ba">BA</label>
+                        <input type="radio" id="ba" name="course" />
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" id="submt" class="col-sm-offset-8 col-md-offset-8 col-lg-offset-8 col-sm-2 col-md-2 col-lg-2 submitButton" value="Submit"  readonly>
+        <!--<input type="reset" class="col-sm-2 col-md-2 col-lg-2 resetButton" />-->
+                </div>
+                <div class="profileImage">
+                    <img alt="SelectImage" id="myimage" width="160px" height="160px" />
+                </div>
+                <div class="uploadC1  col-sm-2 col-md-2 col-lg-2">
+                    <label for="addofferupload">Upload Image</label>
+                    <input type="file" id="addofferupload" class="upload" onchange="onFileSelected(event)">
+                </div>
+
+            </script>
+
+
+
+
+        </div>
+    </div>
+    <script id="templateHTML" type="templete/html">
+
+        <form action="" autocomplete="off" name="loginForm" onsubmit="">
+
+
+            <div class="row setheight_Login">
+                <div class="col-xs-offset-2 col-lg-offset-4 col-md-offset-4 col-xs-8 col-sm-3 col-md-3 col-lg-3">
+                    <input type="text" name="userName" value="" placeholder="Username" class="form-control setInput_Login" required="required" pattern="[a-zA-Z]+\d*">
+                </div>
+            </div>
+
+            <div class="row setheight_Login">
+                <div class="col-xs-offset-2 col-lg-offset-4 col-md-offset-4 col-sm-3 col-xs-8 col-md-3 col-lg-3">
+                    <input type="password" name="password" value="" placeholder="Password" required="required" pattern="\w.{8,16}" class="form-control setInput_Login ">
+                </div>
+            </div>
+
+            <div class="row setheight_Login">
+                <div class="col-xs-offset-2 col-lg-offset-4 col-md-offset-4 col-xs-8 col-sm-3 col-md-3 col-lg-3">
+                    <button type="submit" name="button" class="btn btn-success btn-lg btn-block">Log In</button>
+                </div>
+            </div>
+
+        </form>
+
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/backbone.js"></script>
+
+
+
+    <!-- <script src="js/registration.js"></script> -->
+    <script src="js/backreg.js"></script>
+</body>
+
+</html>
