@@ -1,0 +1,140 @@
+.bodycontainer {
+    background-color: rgb(112, 120, 233);
+    color: white;
+    margin-left: 20px;
+    padding-bottom: 30px;
+}
+
+input{
+    color: black;
+    margin-bottom: 2px;
+}
+
+input[type="nuber"] {
+    color: black;
+      margin-bottom: 2px;
+}
+
+select {
+    color: black
+}
+
+textarea {
+    color: black;
+      margin-bottom: 2px;
+}
+
+.errr {
+    color: red;
+}
+
+.profileImage {
+    border: 2px solid black;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 46px;
+    left: 59%;
+}
+
+.uploadC1 {
+    background: white;
+    border-radius: 5px;
+    height: 26px;
+    text-align: center;
+    color: #000;
+    font-size: 93%;
+    position: absolute;
+    top: 218px;
+    left: 56%;
+}
+
+.upload {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+}
+
+.submitButton {
+    color: black;
+}
+
+.resetButton {
+    color: black;
+}
+.formConatainer{
+  margin-left:13%;
+}
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.sidenavHeight{
+padding-bottom: 700px;
+}
+.setheight_Login, .setheight_Reg {
+    margin-top: 30px;
+}
+
+.setposition_Login {
+    margin-top: 250px;
+}
+
+.setInput_Login {
+    height: 46px;
+    font-size: 150%;
+}
+
+.forgotPswd_LoginForm>a {
+    color: #333;
+    font-size: 117%;
+}
+
+.subFields {
+    font-size: 140%;
+}
+
+.registrationHeading {
+    font-size: 150%;
+    font-size: 195%;
+    margin-left: 3%;
+}
+
+.headMargin {
+    margin-top: 3%;
+}
+
+.LoginRegistrationButton {
+    height: 2%;
+}
+
+.logoImage {
+    margin-left: 33%;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
