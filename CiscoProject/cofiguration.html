@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configaration</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-9 mainResultContainer ">
+            <!-- Quize module Heading-->
+            <div class="row ">
+                <div class=" col-xs-offset-2  col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-9  col-sm-10 col-md-9 col-lg-10 Dashboard">
+                    <span>Configuration </span>
+                </div>
+            </div>
+            <!-- End of  Quize module Heading-->
+            <!-- input Field-->
+            <div class="row">
+                <div class="col-xs-offset-2  col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-10  col-sm-11 col-md-11 col-lg-11">
+                    <!--Input Field1-->
+                    <div class="row">
+                        <div class=" col-xs-11 col-sm-11 col-md-12 col-lg-11  input-row">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-7  col-lg-6">
+                                    <label for="event_time" class="input-label-element">Event Time Limit  </label>
+                                </div>
+                                <div class="col-sm-offset-7 col-md-offset-5  col-lg-offset-7 ">
+                                    <input type="text" class="input-field" id="event_time" />
+                                </div>
+                            </div>
+                            <!--EndInput Field1-->
+                            <!--Input Field2-->
+                            <div class="row">
+                                <div class="col-sm-4 col-md-7  col-lg-6">
+                                    <label for="question_skip" class="input-label-element"> Can User Skip the Qustion?</label>
+                                </div>
+                                <div class="col-sm-offset-7 col-md-offset-5  col-lg-offset-7 configRadioAllign">
+
+                                    <div class="radio-item">
+                                        <input type="radio" id="optionYES" name="skipChoice" value="">
+                                        <label for="optionYES">YES</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="optionNo" name="skipChoice" value="">
+                                        <label for="optionNo">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--EndInput Field2-->
+                            <!--Input Field3-->
+                            <div class="row">
+                                <div class="col-sm-4 col-md-7 col-lg-6">
+                                    <label for="answer_change" class="input-label-element">Can User Change the Answer?</label>
+                                </div>
+                                <div class="col-sm-offset-7 col-md-offset-6 col-lg-offset-7 configRadioAllign">
+
+                                    <div class="radio-item">
+                                        <input type="radio" id="optYES" name="changeAns" value="">
+                                        <label for="optYES">YES</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="optNo" name="changeAns" value="">
+                                        <label for="optNo">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--EndInput Field3-->
+                            <!--Input Field4-->
+                            <div class="row">
+                                <div class="col-sm-4 col-md-7  col-lg-6">
+                                    <label for="totalNoQuestion" class="input-label-element">Total Number of Questions</label>
+                                </div>
+                                <div class="col-sm-offset-7 col-md-offset-5  col-lg-offset-7 ">
+                                    <input type="text" class="input-field " id="totalNoQuestion" />
+                                </div>
+                            </div>
+                            <!--EndInput Field4-->
+                            <!--Input Field5-->
+                            <div class="row lastRow">
+
+                                <div class="col-sm-4 col-md-7  col-lg-6">
+                                    <label class="input-label-element">Display Result to User</label>
+                                </div>
+                                <div class="col-sm-offset-7 col-md-offset-5  col-lg-offset-7 configRadioAllign">
+                                    <div class="radio-item">
+                                        <input type="radio" id="YES" name="resultDisplay" value="">
+                                        <label for="YES">YES</label>
+                                    </div>
+                                    <div class="radio-item ">
+                                        <input type="radio" id="No" name="resultDisplay" value="">
+                                        <label for="No">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--EndInput Field5-->
+
+                            <!-- End of Input store-serial and SSID -->
+                        </div>
+                    </div>
+                    <!-- Submit button div -->
+                    <div class="row ">
+                        <div class="ConfigSubmitButton">
+                            <button type="submit" name="button" class="form-control submitButton"> Submit</button>
+                        </div>
+                    </div>
+                    <!-- End of Submit button div -->
+                </div>
+            </div>
+            <!--End of input Field-->
+        </div>
+    </div>
+</body>
+
+
+</html>

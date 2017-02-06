@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Quize Module</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <form action="" autocomplete="off" name="" onsubmit="">
+            <div class="row">
+              <div class="col-sm-11 col-xs-11 col-md-11 col-lg-11 ">
+                <span class=" wrapper questionButton">
+                        <span  class="btn btn-default active">1</span>
+                        <span  >2</span>
+                      <span  >3 </span>
+                      <span  >4</span>
+                      <span  >5</span>
+                      <span  >8</span>
+                      <span  >9 </span>
+                      <span  >10</span>
+                      <span  >11</span>
+                      <span  >12</span>
+                      <span  >14</span>
+                      <span  >15</span>
+                      <span  >16</span>
+                      <span  >17</span>
+                      <span  >18</span>
+
+                      <span  >20</span>
+                      <span  >21</span>
+                      <span  >22</span>
+                      <span  >23</span>
+                      <span  >24</span>
+                      <span  >25</span>
+                      <span  >26</span>
+                      <span  >27</span>
+                      <span  >28</span>
+                      <span  >29</span>
+                      <span  >30</span>
+                      <span  >31</span>
+                      <span  >32</span>
+                      <span  >33</span>
+                      <span  >34</span>
+                      <span  >35</span>
+                      <span  >36</span>
+                      <span  >37</span>
+                      <span  >38</span>
+                      <span  >39</span>
+                      <span  >40</span>
+                      <span  >41</span>
+
+                </span>
+
+              </div>
+
+            </div>
+            <div class="row subCategory">
+                <div class="col-xs-offset-1 col-lg-offset-1 col-md-offset-1 ">
+                    <span class="col-sm-2 col-md-2 col-lg-2 ">Category Name</span>
+                    <div class="col-sm-4 col-md-4 col-lg-4" id="Category">Category1 </div>
+                </div>
+                <div class="col-xs-offset-1 col-lg-offset-1 col-md-offset-1 ">
+                    <span class="col-sm-3 col-md-3 col-lg-3 ">Number of Questions Answered</span>
+                    <div class="col-sm-3 col-md-3 col-lg-3" ><span>1</span>/<span>100</span></div>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-xs-offset-1 col-lg-offset-1 col-md-offset-1  subCategory">
+                    <!-- Question Container-->
+                    <div class="questionContainer">
+                        <p>
+                            <span>1.</span> What does the following program print?
+                            <pre>
+#include<stdio.h>
+
+void f(int *p, int *q){
+p = q;
+*p = 2;
+
+}
+
+int i=0; j=1;
+
+int main(){
+
+f(&i, &j);
+
+printf(“%d %d\n”, i, j);
+
+return 0;
+
+}
+                 </pre>
+                        </p>
+                    </div>
+                    <!-- End of Question Container-->
+                </div>
+
+            </div>
+            <!-- Multiple choice answers-->
+            <div class="row">
+                <div class="col-xs-offset-1 col-lg-offset-1 col-md-offset-1">
+                    <div class="radio-item">
+                        <input type="radio" id="optionA" name="multipleChoice" value="">
+                        <label for="optionA">22</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="optionB" name="multipleChoice" value="">
+                        <label for="optionB">21</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="optionC" name="multipleChoice" value="">
+                        <label for="optionC">01</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="optionD" name="multipleChoice" value="">
+                        <label for="optionD">02</label>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Multiple choice answers-->
+
+            <div class="row ">
+                <div class="col-xs-offset-1 col-lg-offset-1 col-md-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2 subCategory">
+                    name="button" class="btn btn-success btn-lg btn-block">Prev</button>
+                </div>
+                <div class="col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-2 col-sm-2 col-md-2 col-lg-2 subCategory">
+                    <button type="button" name="button" class="btn btn-success btn-lg btn-block">Save</button>
+                </div>
+                <div class="col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-2 col-sm-2 col-md-2 col-lg-2 subCategory">
+                    <button type="button" name="button" class="btn btn-success btn-lg btn-block">Next</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+
+</html>

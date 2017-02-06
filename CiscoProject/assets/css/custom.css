@@ -1,0 +1,291 @@
+.setCategoryHieght {
+    margin-top: 180px;
+}
+
+.select-formate {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: url("../../assets/img/drop_down_icn.png") no-repeat 97%;
+    display: block;
+    height: 35px;
+    background-color: #ffffff;
+    color: #8a8a8a;
+    font-weight: 400;
+    font-family: 'myWebFont2'
+}
+
+.select-formate select {
+    padding: 5px 8px;
+    margin-left: -14px;
+    height: 35px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #8a8a8a;
+    font-weight: 500;
+}
+
+.subCategory {
+    margin-top: 30px;
+}
+
+.uploadButton label {
+    cursor: pointer;
+}
+
+.uploadButton {
+    background: #db5031;
+    margin-top: 30px;
+    border-radius: 5px;
+    height: 42px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-size: 112.50%;
+    width: 23%;
+    margin-left: 34.3%;
+}
+
+.upload {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.radio-item {
+    display: inline-block;
+    position: relative;
+    padding: 0 25px;
+    margin: 10px 0 0;
+}
+
+.radio-item input[type='radio'] {
+    display: none;
+}
+
+.radio-item label {
+    font-size: 98%;
+    color: #8a8a8a;
+    font-weight: 500;
+}
+
+.radio-item label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 11px;
+    border: 1px solid #8a8a8a;
+    background-color: transparent;
+}
+
+.radio-item input[type=radio]:checked+label:after {
+    border-radius: 11px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 9px;
+    left: 28.5px;
+    content: " ";
+    display: block;
+    background: #5cb85c;
+}
+
+.setQuizEventHieght {
+    margin-top: 38px;
+}
+
+pre {
+    background: #fff;
+    border: none;
+}
+
+.fieldMargin {
+    margin-left: 3.8%;
+}
+
+.submitButton {
+    background: #db5031;
+    font-weight: 800;
+    color: white;
+    font-size: 112.50%;
+    height: 42px;
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+.adminInputField {
+    width: 100%
+}
+
+.adminInputFieldContainer .select2-container-multi .select2-choices .select2-search-choice {
+    border: none !important;
+    line-height: 20px !important;
+    background-color: white !important;
+    background-image: none !important;
+}
+
+.adminInputFieldContainer .select2-search-choice-close {
+    display: none !important;
+}
+
+.main-container {
+    margin-left: 0;
+}
+
+.Dashboard {
+    background-color: rgba(4, 14, 1, 0.14);
+    color: #8a8a8a;
+    font-size: 184.7%;
+    font-weight: 800;
+    /*padding-left: 15px;*/
+    /*padding: 8px;*/
+    /*margin-left: 29%;*/
+}
+
+.mainResultContainer {
+    margin-top: 120px;
+}
+
+.input-field {
+    margin-top: 14px;
+    /*margin-left: 20px;*/
+    /*padding: 10px;*/
+    display: inline;
+    height: 40px;
+}
+
+.input-label-element {
+    font-size: 137.5%;
+    font-weight: 800;
+    color: #8a8a8a;
+    margin-top: 5%;
+}
+
+.input-row {
+    background-color: rgba(4, 14, 1, 0.14);
+    margin-top: 10px;
+    /*margin-left: 31.2%;*/
+}
+
+.lastRow {
+    margin-bottom: 12px;
+}
+
+.configRadioAllign {
+    margin-top: 14px;
+    /*padding-left: 19px;*/
+}
+
+.ConfigSubmitButton {
+    /*margin-left: 103%;*/
+    width: 20%;
+    margin-top: 34px;
+}
+
+.qustionNextButton {
+    /*margin-left: -4%;*/
+}
+
+/*@media screen and (max-width:1340px) {
+    .select-formate select {
+        width: 110%;
+    }
+}
+
+@media screen and (max-width:1066px) {
+    .select-formate select {
+        width: 111%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .select-formate select {
+        width: 116%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .select-formate select {
+        width: 118%;
+    }
+}*/
+
+.wrapper {
+    margin: 0;
+    padding-top: 4em;
+}
+.dotwrapper {
+    margin-left:-4em;
+    padding-top: 4em;
+}
+
+.paginate {
+    text-align: center;
+}
+
+.paginate button {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px;
+    margin: 1px 2px;
+    padding: 5px 10px;
+    display: inline-block;
+    border-top: 1px solid #fff;
+    text-decoration: none;
+    color: #717171;
+    background-color: #f5f5f5;
+}
+
+.paginate button:hover, .paginate button:focus {
+    border-color: #fff;
+    background-color: #fdfdfd;
+}
+
+.paginate .more {
+    box-shadow: 0 0 0 0 transparent;
+    border: 0 none;
+    background: transparent;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.paginate .active {
+    border-color: #505050;
+    color: white;
+    text-shadow: black 0 1px 0;
+    background-color: #676767;
+}
+
+.questionButton{
+    display: inline-block;
+    width: 30%;
+    white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ -o-text-overflow: ellipsis;
+
+}
+.marginBttnFirst{
+  margin-left: 4%;
+  margin-top: 10px;
+}
+.bttnSize{
+  width:9%;
+}
+.marginBttnFirst  .active{
+  color: white;
+  background-color: #af2323;
+  border-color:  #af2323;
+}
