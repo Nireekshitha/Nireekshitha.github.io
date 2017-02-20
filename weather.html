@@ -20,7 +20,7 @@
       regExp[i]="/"+city[i]+"/g";
     }
     for(i=0;i<city.length;i++){
-      if((question.search(city[i])>=0 && (question.search("weather"))>=0){
+      if((question.search(city[i]))>=0 && (question.search("weather"))>=0){
          var url="http://api.openweathermap.org/data/2.5/weather?q="+city[i];
           var getReq = new XMLHttpRequest();
                getReq.open("GET", url, true);
