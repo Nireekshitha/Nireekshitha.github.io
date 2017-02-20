@@ -14,6 +14,7 @@ var AnnaBooked = [],
 var msg="";
 
 function c1(from, to) {
+    var temp= AnnaBooked;
     for (var i = 0; i < Anna.length; i++) {
         if (Anna[i] >= from && Anna[i] < to) {
             if (AnnaBooked.indexOf(Anna[i]) == -1) {
@@ -21,7 +22,8 @@ function c1(from, to) {
                 AnnaBookedIndex++;
             }
             else{
-              alert("already booked");
+                AnnaBooked=temp;
+              console.log("already booked");
               break;
             }
         }
@@ -29,6 +31,7 @@ function c1(from, to) {
 }
 
 function c2(from, to) {
+     var temp= BettyBooked;
     for (var i = 0; i < Betty.length; i++) {
         if (Betty[i] >= from && Betty[i] < to) {
             if (BettyBooked.indexOf(Betty[i]) == -1) {
@@ -36,7 +39,8 @@ function c2(from, to) {
                 BettyBookedIndex++;
             }
             else{
-              alert("already booked");
+                BettyBooked=temp;
+              console.log("already booked");
               break;
             }
         }
@@ -44,6 +48,7 @@ function c2(from, to) {
 }
 
 function c3(from, to) {
+   var temp=CaraBooked;
     for (var i = 0; i < Cara.length; i++) {
         if (Cara[i] >= from && Cara[i] < to) {
             if (CaraBooked.indexOf(Cara[i]) == -1) {
@@ -51,7 +56,8 @@ function c3(from, to) {
                 CaraBookedIndex++;
             }
             else{
-              alert("already booked");
+                CaraBooked=temp
+              console.log("already booked");
               break;
             }
         }
@@ -59,6 +65,7 @@ function c3(from, to) {
 }
 
 function c4(from, to) {
+    var temp=DonnaBooked;
     for (var i = 0; i < Donna.length; i++) {
         if (Donna[i] >= from && Donna[i] < to) {
             if (DonnaBooked.indexOf(Donna[i]) == -1) {
@@ -66,7 +73,9 @@ function c4(from, to) {
                 DonnaBookedIndex++;
             }
             else{
-              
+              DonnaBooked=temp;
+                console.log("already booked");
+                break;
             }
         }
     }
