@@ -14,9 +14,10 @@
     <button id="checkWeather">click</button>
   </div>
   <script type="text/javascript">
+      var regExp=[];
     var question=document.getElementById("city").value;
     var city=["karnataka","kerala","tamilnadu"];
-    for(i=0;i<city.length;i++){
+    for(var i=0;i<city.length;i++){
       regExp[i]="/"+city[i]+"/g";
     }
     for(i=0;i<city.length;i++){
