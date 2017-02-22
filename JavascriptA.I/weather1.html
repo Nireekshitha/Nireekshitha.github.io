@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>List</title>
+    <link rel="stylesheet" href="CSS/test.css">
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="city" />
+        <button id="checkWeather">click</button>
+        <div id="result"></div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('city').onkeypress = function(event) {
+            if (event.keyCode == 13) {
+                showWeather();
+            }
+        }
+        function showWeather() {
+            var regExp = [],
+                a;
+            var arr = [];
+            var question = document.getElementById("city").value;
+            var city = ["karnataka", "kerala", "tamilnadu", "bengaluru"];
+            for (var i = 0; i < city.length; i++) {
+                regExp[i] = "/" + city[i] + "/g";
+            }
+            for (i = 0; i < city.length; i++) {
+                if ((question.search(city[i])) >= 0 && (question.search("weather")) >= 0) {
+                    var url1 = "http://maps.googleapis.com/maps/api/geocode/json?address=" + city[i] + "&sensor=false"
+                    var getReq1 = new XMLHttpRequest();
+                    getReq1.open("GET", url1, true);
+                    getReq1.send();
+                    console.log(getReq1);
+                    getReq1.onload = function() {
+                        console.log("inside" + getReq1);
+                        if (getReq1.readyState === getReq1.DONE) {
+                            if (getReq1.status === 200) {
+                                a = JSON.parse(getReq1.response);
+                                console.log(a);
+                                var cityLat = a.results[0].geometry.location.lat;
+                                var cityLng = a.results[0].geometry.location.lng;
+                                console.log(a.results[0].geometry.location.lat);
+                                console.log(a.results[0].geometry.location.lng);
+                                var url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + cityLat + "&lon=" + cityLng + "&appid=2d03d9442e8165ef1f8092817b356f62";
+                                var getReq = new XMLHttpRequest();
+                                getReq.open("GET", url, true);
+                                getReq.send();
+                                console.log(getReq);
+                                getReq.onload = function() {
+                                    console.log("inside" + getReq);
+                                    if (getReq.readyState === getReq.DONE) {
+                                        if (getReq.status === 200) {
+                                            var forecastData = JSON.parse(getReq.response);
+                                            console.log(JSON.parse(getReq.response));
+                                            var listData = forecastData.list;
+                                            var today = listData[0].dt_txt;
+                                            var todayDate = today.split(" ")[0].split("-");
+                                            console.log("date" + todayDate[0]);
+                                            var l = 0;
+                                            for (i = 0; i < listData.length; i++) {
+                                                if (((listData[i].dt_txt).indexOf(todayDate[0] + "-" + todayDate[1] + "-" + todayDate[2]) >= 0) || ((listData[i].dt_txt).indexOf(todayDate[0] + "-" + todayDate[1] + "-" + (parseInt(todayDate[2]) +
+                                                        1)) >= 0)) {
+                                                    arr[l] = {
+                                                        temprature: Math.floor(listData[i].main.temp - 273),
+                                                        date: ((listData[i].dt_txt).split(" "))[0].split("-"),
+                                                        time: (((listData[i].dt_txt).split(" "))[1].split(":"))[0],
+                                                        weather: {
+                                                            Desc: listData[i].weather[0].description,
+                                                            main: listData[i].weather[0].main
+                                                        }
+                                                    };
+                                                    console.log(arr[l]);
+                                                }
+                                                l = l + 1;
+                                            }
+                                            console.log("todayDate" + todayDate);
+                                            console.log("array date" + arr[0].date);
+                                            console.log("array date" + arr[0].time);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
