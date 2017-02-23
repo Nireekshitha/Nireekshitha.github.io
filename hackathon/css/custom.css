@@ -1,0 +1,82 @@
+.heading {
+    font-size: 20px;
+    background-color: grey;
+}
+
+.description {
+    font-size: 16px;
+    padding-top: 10px
+}
+
+.recipie_div {
+    border: 1px solid grey;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    margin-left: 2%;
+}
+
+.marginTopGap {
+    margin-top: 100px
+}
+.gapBtnDiv{
+  height: 30px;
+}
+.mainContainer{
+  /*border: 1px solid grey;*/
+}
+.inputMargin{
+  margin-left:0;
+}
+.radio-item {
+    display: inline-block;
+    position: relative;
+    padding: 0 3px;
+    margin: 10px 0 0;
+}
+
+.radio-item input[type='radio'] {
+    display: none;
+}
+.radio-item label {
+    font-size: 98%;
+    color:#56ad9b;
+    font-weight: 500;
+}
+.radio-item label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 11px;
+    border: 1px solid #8a8a8a;
+    background-color: transparent;
+}
+.radio-item input[type=radio]:checked+ label:after {
+    border-radius: 11px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 9px;
+    left: 19px;
+    content: " ";
+    display: block;
+    background: #db5031;
+
+  }
+  .loginContainer{
+    margin-top: 100px;
+    /*background-image: url("../img/login.jpg");*/
+    /*background-color:rgb(99, 95, 94);*/
+    padding-bottom: 10px;
+    color:#56ad9b;;
+    width:100%;
+    height: auto;
+    background-size: cover;
+  }
+  .marginTopInputField{
+    margin-top: 10px;
+
+  }
