@@ -1,11 +1,287 @@
-.login_firstRow{
-  background-color: #3dcd58;
-  padding:140px;
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('../../assets/fonts/ufonts.com_arial-rounded-mt-light.ttf');
+    /* IE9 Compat Modes */
+    src: url('../../assets/fonts/ufonts.com_arial-rounded-mt-light.ttf') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt-light.ttf') format('woff2'), /* Super Modern Browsers */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt-light.ttf') format('woff'), /* Pretty Modern Browsers */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt-light.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt-light.ttf') format('svg');
+    /* Legacy iOS */
 }
-.login_inputRow{
-padding-bottom: 30px
+
+@font-face {
+    font-family: 'MyWebFont2';
+    src: url('../../assets/fonts/ufonts.com_arial-rounded-mt.ttf');
+    /* IE9 Compat Modes */
+    src: url('../../assets/fonts/ufonts.com_arial-rounded-mt.ttf') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt.ttf') format('woff2'), /* Super Modern Browsers */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt.ttf') format('woff'), /* Pretty Modern Browsers */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../assets/fonts/ufonts.com_arial-rounded-mt.ttf') format('svg');
+    /* Legacy iOS */
 }
-.login_lastRow{
-  background-color: #009530;
-    padding:140px;
+
+
+/*---login  Page-------*/
+
+.login_firstRow {
+    background-color: #3dcd58;
+    padding-bottom: 44vh;
 }
+
+.login_inputRow {
+    padding-top: 4vh;
+    padding-bottom: 0.5vh;
+}
+
+.login_lastRow {
+    background-color: #009530;
+    padding-bottom: 44.4vh;
+}
+
+.login_forgotPasswordLink {
+    color: #3dcd58;
+    text-decoration: underline;
+    padding-left: 6%;
+    margin-top: -1px;
+}
+
+.loginButton {
+    background-color: #42b4e6 !important;
+    color: white !important;
+    font-family: MyWebFont;
+    font-weight: bold;
+}
+
+.login_logoImage {
+    width: 100%;
+    height: auto;
+    margin-top: -1vh;
+}
+
+@media screen and (min-height:1024px) {
+    .login_lastRow {
+        background-color: #009530;
+        padding-bottom: 46.7vh;
+    }
+    .login_inputRow {
+        padding-top: 2.5vh;
+        padding-bottom: 0.5vh;
+    }
+}
+
+@media screen and (max-width:1920px) {
+    .login_forgotPasswordLink {
+        padding-left: 15%;
+        margin-top: -1px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .login_forgotPasswordLink {
+        padding-left: 3%;
+        margin-top: -1px;
+    }
+}
+
+@media screen and (min-device-width: 1500px) and (max-width:1600px) {
+    .login_forgotPasswordLink {
+        padding-left: 6%;
+        margin-top: -1px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .login_forgotPasswordLink {
+        color: #3dcd58;
+        text-decoration: underline;
+        padding-left: 4%;
+        margin-top: -1px;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .loginButton {
+        background-color: #42b4e6 !important;
+        color: white !important;
+        width: 200% !important;
+    }
+    .login_forgotPasswordLink {
+        padding-left: 11%;
+    }
+}
+
+
+/*login Page css endas*/
+
+
+/*dashbord css starts*/
+
+.sidebarMargin {
+    padding-left: 0 !important;
+}
+
+.sidebarStyling {
+    background-color: #3dcd58;
+    color: white !important;
+}
+
+.dashbordHeader {
+    border-bottom: 1px solid #3dcd58;
+    padding-bottom: 2vh;
+}
+
+.sidebar-nav .sidebarStyling {
+    height: 91vh !important;
+}
+
+.containerBackgroundColor {
+    background-color: #efefef;
+}
+
+.weatherDisplayContainer {
+    background-color: #efefef;
+}
+
+.userCountDiv {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background-color: white;
+    margin-top: 15px;
+    font-family: MyWebFont;
+    font-size: 36px;
+      color:#626469;
+}
+
+.userCount {
+    font-family: MyWebFont;
+    font-size: 60px;
+    text-align: center;
+    margin-top: -3vh;
+      color:#626469;
+}
+
+.rolesDiv {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-top: 18px;
+    padding-right: 1%;
+    background-color: white;
+    text-align: center;
+}
+
+.permissionDiv {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-top: 18px;
+    /*padding-right: 41% !important;*/
+    background-color: white;
+    text-align: center;
+}
+
+.rolesCount {
+    font-family: MyWebFont;
+    font-size: 60px;
+    color:#626469;
+}
+
+.permissionCount {
+    font-family: MyWebFont;
+    font-size: 60px;
+      color:#626469;
+}
+.roleHeading{
+  font-family: MyWebFont;
+  font-size: 24px;
+    color:#626469;
+}
+.permisssionHeading{
+  font-family: MyWebFont;
+  font-size: 24px;
+    color:#626469;
+}
+.locationWeatherHeading{
+      font-family: MyWebFont1;
+      font-size: 24px;
+
+}
+.weatherInfoContainer{
+  margin-top: 15px;
+  /*margin-left: 2% !important;*/
+  background-color: white;
+  /*margin-right: 3% !important;*/
+}
+@media (min-width: 768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+    .sidebar-nav .navbar ul {
+        float: none;
+    }
+    .sidebar-nav .navbar ul:not {
+        display: block;
+    }
+    .sidebar-nav .navbar li {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    #wrapper {
+        padding-left: 0;
+    }
+    /*.sidebar-nav{
+        height: 690px !important;
+        margin-top: -20px;
+    }*/
+    /*.logoImg {
+        margin: 5px 25px;
+        width: 100px !important;
+        height: 100px !important;
+    }*/
+}
+
+.sidebar-nav .navbar-header {
+    float: none;
+}
+
+.push_setPos {
+    margin-top: 30px;
+}
+
+.navbar {
+    border-radius: 0 !important;
+}
+
+@media screen and (min-width:300px) and (max-width:767px) {
+    .sidebar-nav .navbar-inverse {
+        margin-top: -29px;
+    }
+    /*.sidebar-nav .navbar-inverse .navbar-collapse {
+        position: relative;
+        top: -31px;
+    }*/
+    .sidebar-nav .navbar {
+        position: relative;
+        min-height: 0px;
+        margin-bottom: 20px;
+        border: none;
+    }
+}
+
+.logoImg {
+    width: 100%;
+}
+
+
+/*dashboard css ends*/
